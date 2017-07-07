@@ -1,0 +1,44 @@
+# ==================================================================
+# .tmux.conf for Lance Alligood (lalligood@gmail.com)
+# ==================================================================
+
+# ==================================================================
+# HISTORY SETTINGS
+# ==================================================================
+# Keep history for 10,000 lines
+set-option -g history-limit 10000
+
+# ==================================================================
+# DISPLAY SETTINGS
+# ==================================================================
+# Set status bar colors
+set-option -g status-bg blue
+set-option -g status-fg white
+# Set border colors
+set-option -g pane-active-border-bg blue
+set-option -g pane-active-border-fg white
+# Set active window/pane indicator colors
+set-window-option -g window-status-current-bg green
+set-window-option -g window-status-current-fg black
+# Increase display time on status bar to 1.5 seconds; default is 0.75
+set-option -g display-time 1500
+
+# ==================================================================
+# KEYBOARD SETTINGS
+# ==================================================================
+# Double tapping prefix jumps to last window
+bind-key C-b last-window
+
+# ==================================================================
+# MOUSE SETTINGS
+# ==================================================================
+# Enable mouse functionality
+set-window-option -g mode-mouse on
+# Allow mouse to select window, select pane, & resize pane
+set-option -g mouse-select-window on
+set-option -g mouse-select-pane on
+set-option -g mouse-resize-pane on
+
+# ==================================================================
+# SESSION SETTINGS
+# ==================================================================

@@ -1,27 +1,35 @@
 #!/bin/bash
 # Create necessary symlink for tmux
+
 currdir=`pwd`
 
-function create_refs {
-if [[ $2 == "" ]]; then
-    # Verify directory exists. Create it if it does not.
-    if [ ! -d $1 ]; then
-        echo $1 directory does not exist. Creating directory...
-        mkdir -v $1
-        echo $1 directory created successfully
+function determine_os()
+# Determine whether running on Linux or Mac
+{
+    myos=`uname -s`
+    if [[ ${myos} == "Darwin" ]]; then
+        tmux=".tmux.conf.mac"
+        echo "Mac operating system detected."
     else
-        echo $1 already exists. Skipping...
+        tmux=".tmux.conf.linux"
+        echo "Linux operating system detected."
     fi
-else
-    # Verify symlink exists. Create it if it does not.
-    if  [ ! -h $HOME/$1 ]; then
+    echo
+}
+
+function create_symlink()
+# Create symlink to configuration file if doesn't already exist
+{
+    src=${currdir}/$2
+    dest=$HOME/$1
+    if  [ ! -h ${dest} ]; then
         echo Symbolic link for $1 does not exist. Creating symlink...
-        ln -v -s $currdir/$2 $HOME/$1
+        ln -vs ${src} ${dest}
         echo Symbolic link for $1 created successfully.
     else
         echo Symbolic link for $1 already exists. Skipping...
     fi
-fi
 }
 
-create_refs .tmux.conf .tmux.conf
+determine_os
+create_symlink .tmux.conf ${tmux}
