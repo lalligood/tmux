@@ -13,6 +13,7 @@ set -g mouse on
 # ==================================================================
 # DISPLAY SETTINGS
 # ==================================================================
+set -g default-terminal "screen-256color"
 # Set status bar colors
 set-option -g status-bg blue
 set-option -g status-fg white
@@ -32,3 +33,6 @@ set-option -g display-time 1500
 # ==================================================================
 # SESSION SETTINGS
 # ==================================================================
+new-session -s DEV -n vim -c $HOME/Projects
+split-window -dh -c $HOME/Projects
+new-window -d -n irc -c $HOME/Downloads weechat
