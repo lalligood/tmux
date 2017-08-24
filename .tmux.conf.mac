@@ -34,5 +34,5 @@ set-option -g display-time 1500
 # SESSION SETTINGS
 # ==================================================================
 new-session -s DEV -n vim -c $HOME/Projects
-split-window -dh -c $HOME/Projects
-new-window -d -n irc -c $HOME/Downloads weechat
+split-window -dh -c $HOME/Downloads
+#new-window -d -n irc -c $HOME/Downloads weechat
