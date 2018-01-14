@@ -1,5 +1,5 @@
 # ==================================================================
-# .tmux.conf for Lance Alligood (lalligood@gmail.com)
+# .tmux.conf.mac for Lance Alligood (lalligood@gmail.com)
 # ==================================================================
 
 # ==================================================================
@@ -15,18 +15,6 @@ set -g mouse on
 # ==================================================================
 # Powerline
 source ./.local/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf
-## Legacy
-#set -g default-terminal "screen-256color"
-## Set status bar colors
-#set-option -g status-bg blue
-#set-option -g status-fg white
-## Set active/inactive border colors
-#set-option -g pane-active-border-bg blue
-#set-option -g pane-active-border-fg white
-#set-option -g pane-border-bg black
-#set-option -g pane-border-fg blue
-## Increase display time on status bar to 1.5 seconds; default is 0.75
-#set-option -g display-time 1500
 
 # ==================================================================
 # KEYBOARD SETTINGS
