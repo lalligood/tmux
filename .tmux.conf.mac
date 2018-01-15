@@ -17,11 +17,15 @@ set -g mouse on
 source ./.local/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf
 
 # ==================================================================
-# KEYBOARD SETTINGS
-# ==================================================================
-
-# ==================================================================
 # SESSION SETTINGS
 # ==================================================================
+# Create DEV session & change to Projects directory
 new-session -s DEV -n Projects -c $HOME/Projects
+# Split window vertically & change to Downloads directory
 split-window -dh -c $HOME/Downloads
+# Create Jupyter window in the background & start jupyter notebook
+new-window -d -n Jupyter -c $HOME/Projects jupyter notebook
+
+# ==================================================================
+# KEYBOARD SETTINGS
+# ==================================================================
