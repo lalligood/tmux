@@ -24,7 +24,7 @@ new-session -s LOCAL -n Projects -c $HOME/Projects
 # Split window vertically & change to Downloads directory
 split-window -dh -c $HOME/Downloads
 # Create Jupyter window in the background & start jupyter notebook
-new-window -d -n Jupyter -c $HOME jupyter notebook
+new-window -d -n Jupyter -c $HOME jupyter lab
 
 # ==================================================================
 # KEYBOARD SETTINGS
