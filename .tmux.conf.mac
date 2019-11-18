@@ -16,7 +16,7 @@ set-option -g display-time 1500
 # DISPLAY SETTINGS
 # ==================================================================
 # Powerline
-source /anaconda3/lib/python3.7/site-packages/powerline/bindings/tmux/powerline.conf
+source /Users/lancealligood/opt/anaconda3/lib/python3.7/site-packages/powerline/bindings/tmux/powerline.conf
 # Window pane colors to match powerline theme
 set-option -g default-terminal "screen-256color"
 set-option -g pane-active-border-style bg=colour31,fg=colour15
