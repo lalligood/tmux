@@ -14,9 +14,9 @@ set -g mouse on
 # DISPLAY SETTINGS
 # ==================================================================
 # Powerline
-source /home/lalligood/anaconda3/lib/python3.6/site-packages/powerline/bindings/tmux/powerline.conf
+source /home/lalligood/.local/lib/python3.7/site-packages/powerline/bindings/tmux/powerline.conf
 # Window pane colors to match powerline theme
-set-option -g default-terminal "screen-256color"
+set-option -g default-terminal screen-256color
 set-option -g pane-active-border-style bg=colour31,fg=colour15
 
 # ==================================================================
@@ -26,6 +26,9 @@ set-option -g pane-active-border-style bg=colour31,fg=colour15
 new-session -s LOCAL -n Projects -c $HOME/Projects
 # Split window vertically & change to Downloads directory
 split-window -dh -c $HOME/Downloads
+# Second window for connecting to entertainment server
+new-window -a -c $HOME -n dirac
+next-window
 
 # ==================================================================
 # KEYBOARD SETTINGS
